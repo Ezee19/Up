@@ -11,11 +11,11 @@ logging.basicConfig(
 
 class Config(object):
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5591577616:AAHUE8cMGXAVvJmRdBSwr1Jsfpz4Ltt93LU")
 
-    API_ID = int(os.environ.get("API_ID", 12345))
+    API_ID = int(os.environ.get("API_ID", 15823382))
 
-    API_HASH = os.environ.get("API_HASH")
+    API_HASH = os.environ.get("API_HASH", "016d5e115a06ddfb6121823d72ae4d8c")
 
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
 
@@ -23,7 +23,7 @@ class Config(object):
 
     DOWNLOAD_LOCATION = "./DOWNLOADS"
 
-    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
+    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "-1001529577466")
 
     MAX_FILE_SIZE = 4194304000
 
@@ -45,16 +45,20 @@ class Config(object):
 
     DEF_WATER_MARK_FILE = "Use this bot @UploadLinkToFileBot"
 
-    DATABASE_URL = os.environ.get("DATABASE_URL", "")
+    DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://W9Uyj61afEXSw601:W9Uyj61afEXSw601@cluster0.zsxso.mongodb.net/?retryWrites=true&w=majority")
 
     SESSION_NAME = os.environ.get("SESSION_NAME", "UploadLinkToFileBot")
 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -1001529577466))
 
     LOGGER = logging
 
-    OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+    OWNER_ID = int(os.environ.get("OWNER_ID", "5104293442"))
 
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1001529577466")
     
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "UploadLinkToFileBot")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "mdiskdownliadbot")
+
+    PRO_USERS = list(set(int(x) for x in os.environ.get("PRO_USERS", "0").split()))
+
+    PRO_USERS.append(OWNER_ID)
